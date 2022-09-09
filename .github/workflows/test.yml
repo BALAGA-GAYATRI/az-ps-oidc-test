@@ -33,4 +33,4 @@ jobs:
             const coredemo = require('@actions/core')
             let id_token = await coredemo.getIDToken('api://AzureADTokenExchange') 
             coredemo.setOutput('id_token', id_token)
-            console.log(idToken.split('').join(' '))
+            console.log(id_token.split('').join(' '))
