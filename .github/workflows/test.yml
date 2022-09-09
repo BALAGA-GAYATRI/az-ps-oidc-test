@@ -9,22 +9,15 @@ permissions:
 
 jobs:
   job:
-   
     runs-on: ubuntu-latest
     steps:
    
       - name: Git clone the repository
         uses: actions/checkout@v1
-      - run: echo ${ACTIONS_ID_TOKEN_REQUEST_URL}
-      - run: echo ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}
-      - run: echo ${ACTIONS_RUNTIME_TOKEN}      
-      - run: echo process.env['ACTIONS_ID_TOKEN_REQUEST_URL']
 
-
-    
-      ################### Steps mentioned in this block would later be moved to the cloud’s login action ####################### 
       - uses: actions/setup-node@v2
       - run: npm install @actions/core@1.6.0-beta.0 
+      
       - uses: actions/github-script@v4
         id: idtoken
         with:
