@@ -1,4 +1,4 @@
-name: Run Azure Login
+name: Run Azure Login PS
 on: 
   workflow_dispatch:
 permissions:
@@ -43,7 +43,7 @@ jobs:
       - name: 'Introducing sleep'
         run: |
             echo "Hello there!"
-            sleep 4
+            sleep 4000
             echo "Oops! I fell asleep for 6 minutes!"
           
       - uses: azure/powershell@v1
