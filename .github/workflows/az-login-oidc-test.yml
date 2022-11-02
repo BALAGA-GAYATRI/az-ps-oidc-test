@@ -43,7 +43,7 @@ jobs:
       - name: 'Introducing sleep'
         run: |
             echo "Hello there!"
-            sleep 360
+            sleep 600
             echo "Oops! I fell asleep for 6 minutes!"
           
       - uses: azure/powershell@v1
