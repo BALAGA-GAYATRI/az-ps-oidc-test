@@ -17,11 +17,15 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENTID }}
           tenant-id: ${{ secrets.AZURE_TENANTID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTIONID }} 
-        
+      
+      - run: |
+          az account show
+          az account get-access-token
+          
       - name: 'Introducing sleep'
         run: |
             echo "Hello there!"
-            sleep 3700
+            sleep 60
             echo "Oops! I fell asleep for 6 minutes!"
        
        
