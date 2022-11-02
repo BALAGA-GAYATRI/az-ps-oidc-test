@@ -1,4 +1,4 @@
-name: Run Azure Login Integration Tests
+name: Run Azure Login
 on: 
   workflow_dispatch:
 permissions:
@@ -43,8 +43,8 @@ jobs:
       - name: 'Introducing sleep'
         run: |
             echo "Hello there!"
-            sleep 180
-            echo "Oops! I fell asleep for 3 minutes!"
+            sleep 360
+            echo "Oops! I fell asleep for 6 minutes!"
           
       - uses: azure/powershell@v1
         with:
